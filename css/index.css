@@ -1,7 +1,12 @@
-<<<<<<< HEAD
-
-=======
-title-reserveren{
-    margin: -2.5rem!important;
+.logo{
+    margin: 5px;
 }
->>>>>>> c22b6a4fce224f644649a725d592f73e1315d4a8
+
+nav{
+    background-color: #383232!important;
+
+}
+.text-red{
+    color: #4F282B;
+}
+
