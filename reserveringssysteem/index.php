@@ -31,8 +31,7 @@ mysqli_close($db);
     <title>Document</title>
 </head>
 <body>
-<div class="mx-auto"
-">
+<div class="mx-auto"">
 <div class="row justify-content-center">
     <img class="logo" src="../img/logo.png" alt="">
 </div>
@@ -47,10 +46,10 @@ mysqli_close($db);
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item ">
-                    <a class="nav-link text-light" href="#">Home</a>
+                    <a class="nav-link text-light" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Reserveren</a>
+                    <a class="nav-link text-light" href="reserveren_stap_1.php">Reserveren</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="../adminpanel/login.php">Login</a>
