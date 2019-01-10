@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/reserveringen.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/reserveringen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +178,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
@@ -273,7 +266,7 @@
     <option name="totallyTimeSpent" value="19774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1057" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1057" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.21334793" />
