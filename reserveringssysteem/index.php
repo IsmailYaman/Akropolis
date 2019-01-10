@@ -1,19 +1,5 @@
 <?php
-//Require DB settings with connection variable
-require_once "../includes/db.php";
-
-//Get the result set from the database with a SQL query
-$query = "SELECT * FROM reservations";
-$result = mysqli_query($db, $query) or die ('Error: ' . $query);
-
-//Loop through the result to create a custom array
-$reservations = [];
-while ($row = mysqli_fetch_assoc($result)) {
-    $reservations[] = $row;
-}
-
-//Close connection
-mysqli_close($db);
+require_once '../includes/db.php'
 ?>
 
 
@@ -59,44 +45,6 @@ mysqli_close($db);
     </div>
 </nav>
 
-<div class="container">
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Datum</th>
-            <th scope="col">Aantal personen</th>
-            <th scope="col">Tijdstip</th>
-            <th scope="col">Opmerking</th>
-            <th scope="col">Voornaam</th>
-            <th scope="col">Achternaam</th>
-            <th scope="col">E-mail</th>
-            <th scope="col">Telefoon</th>
-
-            <th colspan="3"></th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($reservations as $reservation) { ?>
-            <tr>
-                <td><?= $reservation['id']; ?></td>
-                <td><?= $reservation['date']; ?></td>
-                <td><?= $reservation['people_amount']; ?></td>
-                <td><?= $reservation['time']; ?></td>
-                <td><?= $reservation['comment']; ?></td>
-                <td><?= $reservation['first_name']; ?></td>
-                <td><?= $reservation['last_name']; ?></td>
-                <td><?= $reservation['email']; ?></td>
-                <td><?= $reservation['phone']; ?></td>
-                <!--            <td><a href="detail.php?id=--><? //= $reservation['id']; ?><!--">Details</a></td>-->
-                <!--            <td><a href="edit.php?id=--><? //= $reservation['id']; ?><!--">Edit</a></td>-->
-                <!--            <td><a href="delete.php?id=--><? //= $reservation['id']; ?><!--&image=-->
-                <? //= $musicAlbum['image']; ?><!--">Delete</a></td>-->
-            </tr>
-        <?php } ?>
-        </tbody>
-    </table>
-</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
