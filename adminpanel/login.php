@@ -42,10 +42,6 @@ if (isset($_POST['submit'])) {
 <body>
 <?php require_once '../includes_user/navbar.php' ?>
 
-
-
-
-
 <div class="container">
     <div class="card login">
     <h1 class="text-center">Login Akropolis</h1>
@@ -57,9 +53,11 @@ if (isset($_POST['submit'])) {
             </div>
             <form action="<?=$_SERVER['PHP_SELF'] ?>" method="post" id="Login">
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Gebruikersnaam</label>
                     <input type="text" class="form-control" name="username" id="username" placeholder="Gebruikersnaam" required/>
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Wachtwoord</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Wachtwoord" required/>
                 </div>
                 <button type="submit" name="submit" value="submit" class="btn btn-primary">Login</button>
@@ -78,7 +76,6 @@ if (isset($_POST['submit'])) {
     </div>
     </div>
 </div>
-
 
 <?php require_once '../includes/footer.php' ?>
 <?php require_once '../includes/bootstrap_script.php' ?>

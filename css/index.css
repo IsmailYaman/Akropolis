@@ -24,6 +24,14 @@ body {
     margin: 5px;
 }
 
+.text-center{
+    min-width: 18em;
+    margin: 0 auto;
+}
+
+.header-text{
+    max-width: 5em;
+}
 nav {
     background-color: #383232 !important;
 }

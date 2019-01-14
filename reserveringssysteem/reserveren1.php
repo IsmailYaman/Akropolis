@@ -8,42 +8,69 @@ require_once '../includes/form_validation.php';
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php require_once '../includes/bootstrap_link.php'?>
+    <?php require_once '../includes/bootstrap_link.php' ?>
     <link rel="stylesheet" href="../css/index.css">
     <title>Akropolis Naaldwijk | Reserveren </title>
 </head>
 <body>
-<?php require_once '../includes_user/navbar.php'?>
+<?php require_once '../includes_user/navbar.php' ?>
 
 <div class="container">
     <div class="card login">
-        <div class="card">
-            <h1>Reserveren</h1>
-         </div>
+        <div class="card  text-center">
+            <h1 class="header-text">Reserveren</h1>
+        </div>
         <h3 class="text-center">Stap 1 van 2</h3>
         <div class="login-form">
-            <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
+
             <div class="main-div">
                 <div class="panel">
 
                 </div>
-                <form action="<?=$_SERVER['PHP_SELF'] ?>" method="post" id="Login">
+                <form action="confirmed.php" method="POST" id="Login">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="username" id="username" placeholder="Gebruikersnaam" required/>
+                        <label for="date">Datum</label>
+                        <input type="date" class="form-control" name="date" id="date" required/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Wachtwoord" required/>
+                        <label for="people_amount">Aantal personen</label>
+                        <input type="text" class="form-control" name="people_amount" id="people_amount" required/>
                     </div>
-                    <button type="submit" name="submit" value="submit" class="btn btn-primary">Login</button>
-                    <?php if (isset($message)) { ?>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong><?= $message; ?></strong>
-                            <button type="button button-danger" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    <?php } ?>
+                    <div class="form-group">
+                        <label for="time">Tijdstip</label>
+                        <input type="time" class="form-control" name="time" id="time" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="first_name">Voornaam</label>
+                        <input type="text" class="form-control" name="first_name" id="first_name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Achternaam</label>
+                        <input type="text" class="form-control" name="last_name" id="last_name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefoon</label>
+                        <input type="number" class="form-control" name="phone" id="phone" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Opmerking (optioneel)</label>
+                        <input type="text" class="form-control" name="comment" id="comment">
+                    </div>
 
+                    <button type="submit" name="submit" value="submit" class="btn btn-primary"><a
+                                href="confirmpage.php">Volgende</a></button>
+                    <!--                    --><?php //if (isset($message)) { ?>
+                    <!--                        <div class="alert alert-warning alert-dismissible fade show" role="alert">-->
+                    <!--                            <strong>--><? //= $message; ?><!--</strong>-->
+                    <!--                            <button type="button button-danger" class="close" data-dismiss="alert" aria-label="Close">-->
+                    <!--                                <span aria-hidden="true">&times;</span>-->
+                    <!--                            </button>-->
+                    <!--                        </div>-->
+                    <!--                    --><?php //} ?>
                 </form>
             </div>
 
