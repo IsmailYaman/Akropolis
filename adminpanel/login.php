@@ -40,40 +40,44 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="../css/index.css   ">
 </head>
 <body>
-<?php require_once '../includes_user/navbar.php' ?>
+<?php require_once '../includes/navbar_user.php' ?>
 
 <div class="container">
     <div class="card login">
-    <h1 class="text-center">Login Akropolis</h1>
-    <div class="login-form">
-        <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
-        <div class="main-div">
-            <div class="panel">
+        <h1 class="text-center">Login Akropolis</h1>
+        <div class="login-form">
+            <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
+            <div class="main-div">
+                <div class="panel">
 
-            </div>
-            <form action="<?=$_SERVER['PHP_SELF'] ?>" method="post" id="Login">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Gebruikersnaam</label>
-                    <input type="text" class="form-control" name="username" id="username" placeholder="Gebruikersnaam" required/>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Wachtwoord</label>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Wachtwoord" required/>
-                </div>
-                <button type="submit" name="submit" value="submit" class="btn btn-primary standard-primary-button">Login</button>
-                <?php if (isset($message)) { ?>
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <strong><?= $message; ?></strong>
-                    <button type="button button-danger" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" id="Login">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Gebruikersnaam</label>
+                        <input type="text" class="form-control" name="username" id="username"
+                               placeholder="Gebruikersnaam" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Wachtwoord</label>
+                        <input type="password" class="form-control" name="password" id="password"
+                               placeholder="Wachtwoord" required/>
+                    </div>
+                    <button type="submit" name="submit" value="submit" class="btn btn-primary standard-primary-button">
+                        Login
                     </button>
-                </div>
-                <?php } ?>
+                    <?php if (isset($message)) { ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong><?= $message; ?></strong>
+                            <button type="button button-danger" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php } ?>
 
-            </form>
+                </form>
+            </div>
+
         </div>
-
-    </div>
     </div>
 </div>
 

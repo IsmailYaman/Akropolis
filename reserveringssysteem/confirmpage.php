@@ -1,5 +1,6 @@
 <?php
 include_once '../includes/confirmed.php';
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -13,12 +14,12 @@ include_once '../includes/confirmed.php';
     <title>Akropolis Naaldwijk | Reservering bevestigd</title>
 </head>
 <body>
-<?php include_once '../includes_user/navbar.php' ?>
+<?php include_once '../includes/navbar_user.php' ?>
 <?php if(empty($errors)): ?>
 <div class="container">
     <div class="card login">
         <div class="card  text-center">
-            <h1 class="header-text" style="max-width: 17em; padding: 10px;">Reservering gelukt</h1>
+            <h1 class="header-text" >Reservering gelukt</h1>
         </div>
 
         <p class="text-center">Uw reservering is ontvangen en word verwerkt. U krijgt een mail als uw reservering is
@@ -32,7 +33,7 @@ include_once '../includes/confirmed.php';
             </button>
         </div>
     </div>
-
+</div>
 <?php else: ?>
 Er zijn errors.
 <?php endif; ?>

@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
     <title>Akropolis Naaldwijk | Reserveren </title>
 </head>
 <body>
-<?php require_once '../includes_user/navbar.php' ?>
+<?php require_once '../includes/navbar_user.php' ?>
 
 <div class="container">
     <div class="card login">
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-group">
                         <label for="people_amount">Aantal personen</label>
-                        <input type="number" class="form-control" name="people_amount" id="people_amount"/>
+                        <input type="number" class="form-control" name="people_amount" id="people_amount" min="1" max="15"/>
                         <?php if($errors == true){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['people_amount']?>
@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-group">
                         <label for="time">Tijdstip</label>
-                        <input type="time" class="form-control" name="time" id="time"/>
+                        <input type="time" class="form-control" name="time" id="time" min="16:30" max="21:30"/>
                         <?php if($errors == true){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['time']?>

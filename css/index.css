@@ -36,6 +36,8 @@ a{
 .header-text{
     padding: 20px 30px;
     margin: 0;
+    background-color: #bb141a!important;
+    color: #ffffff!important;
 }
 nav {
     background-color: #383232 !important;
@@ -58,9 +60,7 @@ nav {
     margin-top: 1em;
 }
 
-.card.login {
 
-}
 
 .main-div {
     background: #ffffff none repeat scroll 0 0;

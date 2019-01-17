@@ -12,7 +12,9 @@
 <body>
 <?php include_once '../includes/navbar.php' ?>
 
-<h1>Onder constructie</h1>
+<div class="container">
+
+</div>
 
 <?php
 include_once '../includes/footer.php';

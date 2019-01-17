@@ -1,5 +1,6 @@
 <?php
 require_once '../includes/db.php';
+session_start();
 ?>
 <html lang="en">
 <!doctype html>
@@ -15,7 +16,7 @@ require_once '../includes/db.php';
     <title>Akropolis Naaldwijk | Home</title>
 </head>
 <body>
-<?php require_once '../includes_user/navbar.php' ?>
+<?php require_once '../includes/navbar_user.php' ?>
 
 
 <?php require_once '../includes/footer.php'?>
