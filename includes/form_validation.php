@@ -17,7 +17,7 @@ if ($first_name == "") {
 if ($last_name == "") {
     $errors['last_name'] = 'Voer uw achternaam in.';
 }
-// this error message wil overwrite the previous error when tracks is empty
+
 if ($email == "") {
     $errors['email'] = 'Voer uw e-mail in.';
 }

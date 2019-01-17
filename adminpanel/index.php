@@ -12,7 +12,9 @@ $num_rows = $values['total'];
 <html>
 <head>
     <title>Akropolis Naaldwijk | Adminpaneel</title>
+    <link rel="stylesheet" href="../css/index.css">
     <?php require_once '../includes/bootstrap_link.php' ?>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
 <?php require_once '../includes/navbar.php' ?>
@@ -28,9 +30,8 @@ $num_rows = $values['total'];
 </div>
 
 <?php
-
+include_once '../includes/footer.php';
+require_once '../includes/bootstrap_script.php'
 ?>
-
-<?php require_once '../includes/bootstrap_script.php' ?>
 </body>
 </html>

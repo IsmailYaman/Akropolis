@@ -1,5 +1,39 @@
 <?php
-require_once '../includes/form_validation.php';
+$query = '';
+if (isset($_POST['submit'])) {
+    //Require database in this file & image helpers
+    require_once '../includes/db.php';
+
+    $date               = mysqli_escape_string($db, $_POST['date']);
+    $people_amount      = mysqli_escape_string($db, $_POST['people_amount']);
+    $time               = mysqli_escape_string($db, $_POST['time']);
+    $comment            = mysqli_escape_string($db, $_POST['comment']);
+    $first_name         = mysqli_escape_string($db, $_POST['first_name']);
+    $last_name          = mysqli_escape_string($db, $_POST['last_name']);
+    $email              = mysqli_escape_string($db, $_POST['email']);
+    $phone              = mysqli_escape_string($db, $_POST['phone']);
+
+    //Require the form validation handling
+    require_once "../includes/form_validation.php";
+    //Special check for add form only
+    if (empty($errors)) {
+        //Save the record to the database
+        $query = "INSERT INTO reservations(date, time, people_amount, first_name, last_name, phone, email, comment) VALUE ('$date', '$time', '$people_amount', '$first_name', '$last_name', '$phone', '$email', '$comment')";
+
+        $result = mysqli_query($db, $query)
+        or die('Error: '.$query);
+
+        if ($result) {
+            header('Location: confirmpage.php');
+            exit;
+        } else {
+            $errors[] = 'Er is iets fout gegaan. Ptobeer op nieuw' . mysqli_error($db);
+        }
+
+        //Close connection
+        mysqli_close($db);
+    }
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -20,63 +54,96 @@ require_once '../includes/form_validation.php';
         <div class="card  text-center">
             <h1 class="header-text">Reserveren</h1>
         </div>
-        <h3 class="text-center">Stap 1 van 2</h3>
-        <div class="login-form">
 
+        <div class="login-form">
             <div class="main-div">
                 <div class="panel">
 
                 </div>
-                <form action="confirmed.php" method="POST" id="Login">
+                <form action="" method="post" >
                     <div class="form-group">
                         <label for="date">Datum</label>
-                        <input type="date" class="form-control" name="date" id="date" required/>
+                        <input type="date" class="form-control" name="date" id="date"/>
+                    <?php if($errors == true){?>
+                        <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                        <?php echo $errors['date']?>
+                        </div>
+                        <?php }?>
                     </div>
+
                     <div class="form-group">
                         <label for="people_amount">Aantal personen</label>
-                        <input type="text" class="form-control" name="people_amount" id="people_amount" required/>
+                        <input type="number" class="form-control" name="people_amount" id="people_amount"/>
+                        <?php if($errors == true){?>
+                            <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                                <?php echo $errors['people_amount']?>
+                            </div>
+                        <?php }?>
                     </div>
+
                     <div class="form-group">
                         <label for="time">Tijdstip</label>
-                        <input type="time" class="form-control" name="time" id="time" required/>
+                        <input type="time" class="form-control" name="time" id="time"/>
+                        <?php if($errors == true){?>
+                            <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                                <?php echo $errors['time']?>
+                            </div>
+                        <?php }?>
                     </div>
                     <div class="form-group">
                         <label for="first_name">Voornaam</label>
-                        <input type="text" class="form-control" name="first_name" id="first_name" required/>
+                        <input type="text" class="form-control" name="first_name" id="first_name"/>
+                        <?php if($errors == true){?>
+                            <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                                <?php echo $errors['first_name']?>
+                            </div>
+                        <?php }?>
                     </div>
+
                     <div class="form-group">
                         <label for="last_name">Achternaam</label>
-                        <input type="text" class="form-control" name="last_name" id="last_name" required/>
+                        <input type="text" class="form-control" name="last_name" id="last_name"/>
+                        <?php if($errors == true){?>
+                            <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                                <?php echo $errors['last_name']?>
+                            </div>
+                        <?php }?>
                     </div>
+
                     <div class="form-group">
                         <label for="phone">Telefoon</label>
-                        <input type="number" class="form-control" name="phone" id="phone" required/>
+                        <input type="number" class="form-control" name="phone" id="phone"/>
+                        <?php if($errors == true){?>
+                            <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                                <?php echo $errors['phone']?>
+                            </div>
+                        <?php }?>
                     </div>
+
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" class="form-control" id="email" required/>
+                        <input type="email" name="email" class="form-control" id="email"/>
+                        <?php if($errors == true){?>
+                            <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                                <?php echo $errors['email']?>
+                            </div>
+                        <?php }?>
                     </div>
+
                     <div class="form-group">
                         <label for="comment">Opmerking (optioneel)</label>
                         <input type="text" class="form-control" name="comment" id="comment">
                     </div>
 
-                    <button type="submit" name="submit" value="submit" class="btn btn-primary"><a
-                                href="confirmpage.php">Volgende</a></button>
-                    <!--                    --><?php //if (isset($message)) { ?>
-                    <!--                        <div class="alert alert-warning alert-dismissible fade show" role="alert">-->
-                    <!--                            <strong>--><? //= $message; ?><!--</strong>-->
-                    <!--                            <button type="button button-danger" class="close" data-dismiss="alert" aria-label="Close">-->
-                    <!--                                <span aria-hidden="true">&times;</span>-->
-                    <!--                            </button>-->
-                    <!--                        </div>-->
-                    <!--                    --><?php //} ?>
+                    <button type="submit" name="submit" value="submit" class="btn btn-primary standard-primary-button">Volgende</button>
+
                 </form>
             </div>
 
         </div>
     </div>
 </div>
+
 
 
 <?php require_once '../includes/footer.php' ?>

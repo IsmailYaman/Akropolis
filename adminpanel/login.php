@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
                     <label for="exampleInputEmail1">Wachtwoord</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Wachtwoord" required/>
                 </div>
-                <button type="submit" name="submit" value="submit" class="btn btn-primary">Login</button>
+                <button type="submit" name="submit" value="submit" class="btn btn-primary standard-primary-button">Login</button>
                 <?php if (isset($message)) { ?>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <strong><?= $message; ?></strong>
