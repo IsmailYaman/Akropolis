@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adminpanel/bevestig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminpanel/bevestigde_reserveringen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminpanel/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminpanel/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/beschikbare_tijden.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/beschikbare_tijden.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/reserveringen.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/reserveringen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/form_validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/form_validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/navbar_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navbar_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/confirmpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/confirmpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/reserveren1.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/reserveren1.php" afterDir="false" />
-    </list>
+    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +56,7 @@
     <session id="-1123318313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -213,7 +199,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="951" />
     <option name="width" value="976" />
     <option name="height" value="1057" />
@@ -313,12 +299,12 @@
       <workItem from="1547384788748" duration="628000" />
       <workItem from="1547403127683" duration="18809000" />
       <workItem from="1547474131995" duration="34996000" />
-      <workItem from="1548064900203" duration="12021000" />
+      <workItem from="1548064900203" duration="12547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86831000" />
+    <option name="totallyTimeSpent" value="87357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
