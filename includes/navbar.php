@@ -1,6 +1,6 @@
     <div class="mx-auto">
         <div class="text-center">
-            <img class="logo" src="../img/logo.png" alt="">
+            <a href="../adminpanel/index.php"> <img class="logo" src="../img/logo.png" alt=""></a>
         </div>
     </div>
     <nav style="background-color: #383232!important" class="navbar navbar-expand-lg navbar-light">

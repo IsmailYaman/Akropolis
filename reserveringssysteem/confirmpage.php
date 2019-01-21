@@ -29,8 +29,8 @@ session_start();
         <div class="main-div">
             <div class="panel">
             </div>
-            <button href="index.php" type="submit" name="submit" value="submit" class="mb-0 p-2 mt-5 btn btn-primary standard-primary-button">Ga terug
-            </button>
+            <a href="index.php" ><button type="submit" name="submit" value="submit" class="mb-0 p-2 mt-5 btn btn-primary standard-primary-button">Ga terug
+            </button></a>
         </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
 <?php
+require_once '../includes/beschikbare_tijden.php';
 $query = '';
 if (isset($_POST['submit'])) {
     //Require database in this file & image helpers
@@ -73,7 +74,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-group">
                         <label for="people_amount">Aantal personen</label>
-                        <input type="number" class="form-control" name="people_amount" id="people_amount" min="1" max="15"/>
+                        <input type="number" class="form-control" name="people_amount" id="people_amount"/>
                         <?php if($errors == true){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['people_amount']?>
@@ -81,15 +82,22 @@ if (isset($_POST['submit'])) {
                         <?php }?>
                     </div>
 
+
                     <div class="form-group">
                         <label for="time">Tijdstip</label>
-                        <input type="time" class="form-control" name="time" id="time" min="16:30" max="21:30"/>
+                    <select class="form-control" id="time" name="time">
+                        <option value="">Selecteer een tijdstip</option>
+                        <?php foreach ($times as $time) { ?>
+                            <option value="<?= $time ?>"><?= $time ?></option>
+                        <?php } ?>
+                    </select>
                         <?php if($errors == true){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['time']?>
                             </div>
                         <?php }?>
                     </div>
+
                     <div class="form-group">
                         <label for="first_name">Voornaam</label>
                         <input type="text" class="form-control" name="first_name" id="first_name"/>

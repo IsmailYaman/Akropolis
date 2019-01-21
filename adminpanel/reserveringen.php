@@ -29,16 +29,39 @@ mysqli_close($db);
     <title>Akropolis Naaldwijk | Adminpaneel</title>
     <?php include_once '../includes/bootstrap_link.php'?>
     <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
 <?php
 include_once '../includes/navbar.php'
 ?>
-<div class="container">
+<nav style="background-color: #383232!important" class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item ">
+                    <a class="nav-link text-light" href="reserveringen.php">Huidige reserveringen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="bevestigde_reserveringen.php">Bevestigde reserveringen</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">Reserveringsnummer</th>
             <th scope="col">Datum</th>
             <th scope="col">Aantal personen</th>
             <th scope="col">Tijdstip</th>
@@ -47,8 +70,8 @@ include_once '../includes/navbar.php'
             <th scope="col">Achternaam</th>
             <th scope="col">E-mail</th>
             <th scope="col">Telefoon</th>
-
-            <th colspan="3"></th>
+            <th scope="col">Bekijk</th>
+            <th colspan="3">Actie</th>
         </tr>
         </thead>
         <tbody>
@@ -63,15 +86,14 @@ include_once '../includes/navbar.php'
                 <td><?= $reservation['last_name']; ?></td>
                 <td><?= $reservation['email']; ?></td>
                 <td><?= $reservation['phone']; ?></td>
-                <!--            <td><a href="detail.php?id=--><? //= $reservation['id']; ?><!--">Details</a></td>-->
-                <!--            <td><a href="edit.php?id=--><? //= $reservation['id']; ?><!--">Edit</a></td>-->
-                <!--            <td><a href="delete.php?id=--><? //= $reservation['id']; ?><!--&image=-->
+                <td><a href="detail.php?id=<?=$reservation['id']?>">Bekijk</a></td>
+                <td><a href="bevestig.php?id=<?=$reservation['id']?>"><i style="color: springgreen; font-size: 2rem ;" class="material-icons">done</i></a></td>
+                <td><a href="delete.php?id=<?=$reservation['id']?>"><i style="color: red; font-size: 2rem ;" class="material-icons">clear</i></a></td>
             </tr>
         <?php } ?>
         </tbody>
     </table>
 </div>
-
 
 
 <?php

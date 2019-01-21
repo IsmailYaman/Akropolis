@@ -18,6 +18,22 @@ session_start();
 <body>
 <?php require_once '../includes/navbar_user.php' ?>
 
+<h1 class="text-center my-3">Welkom bij Grieks Restaurant Akropolis Naaldwijk.</h1>
+<?php
+//include_once '../includes/db.php';
+//
+//$times = [];
+//$time = strtotime('16:30');
+//while ($time <= strtotime('21:30')) {
+//
+//    $times[] = date('H:i', $time);
+//
+//}
+//
+//$date = mysqli_escape_string($db, $_GET['date']);
+//
+//print_r($date);
+?>
 
 <?php require_once '../includes/footer.php'?>
 <?php require_once '../includes/bootstrap_script.php' ?>
