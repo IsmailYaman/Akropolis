@@ -1,7 +1,13 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['name'])) {
+    header('Location: login.php');
+    exit;
+}
+
 require_once '../includes/db.php';
-$sql = "SELECT count(id) AS total FROM reservations";
+$sql = "SELECT count(id) AS total FROM reservations WHERE confirmed = 0";
 $result = mysqli_query($db, $sql);
 $values = mysqli_fetch_assoc($result);
 $num_rows = $values['total'];

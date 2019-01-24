@@ -11,7 +11,7 @@ $name = $_SESSION['name'];
 require_once "../includes/db.php";
 
 //Get the result set from the database with a SQL query
-$query = "SELECT * FROM reservations";
+$query = "SELECT * FROM reservations WHERE confirmed = 0";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
 //Loop through the result to create a custom array
@@ -46,7 +46,7 @@ include_once '../includes/navbar.php'
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item ">
-                    <a class="nav-link text-light" href="reserveringen.php">Huidige reserveringen</a>
+                    <a class="nav-link text-light" href="reserveringen.php">Openstaande reserveringen</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="bevestigde_reserveringen.php">Bevestigde reserveringen</a>
@@ -57,7 +57,7 @@ include_once '../includes/navbar.php'
     </div>
 </nav>
 
-<div class="container-fluid">
+
     <table class="table">
         <thead>
         <tr>
@@ -85,7 +85,7 @@ include_once '../includes/navbar.php'
                 <td><?= $reservation['first_name']; ?></td>
                 <td><?= $reservation['last_name']; ?></td>
                 <td><?= $reservation['email']; ?></td>
-                <td><?= $reservation['phone']; ?></td>
+                <td>0<?= $reservation['phone']; ?></td>
                 <td><a href="detail.php?id=<?=$reservation['id']?>">Bekijk</a></td>
                 <td><a href="bevestig.php?id=<?=$reservation['id']?>"><i style="color: springgreen; font-size: 2rem ;" class="material-icons">done</i></a></td>
                 <td><a href="delete.php?id=<?=$reservation['id']?>"><i style="color: red; font-size: 2rem ;" class="material-icons">clear</i></a></td>
@@ -93,9 +93,6 @@ include_once '../includes/navbar.php'
         <?php } ?>
         </tbody>
     </table>
-</div>
-
-
 <?php
 include_once '../includes/footer.php';
 include_once '../includes/bootstrap_script.php';

@@ -1,6 +1,6 @@
 <?php
 include_once '../includes/confirmed.php';
-session_start();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,7 +22,7 @@ session_start();
             <h1 class="header-text" >Reservering gelukt</h1>
         </div>
 
-        <p class="text-center">Uw reservering is ontvangen en word verwerkt. U krijgt een mail als uw reservering is
+        <p class="text-center">Uw aanvraag is ontvangen en word verwerkt. U krijgt een mail als uw aanvraag is
             goedgekeurd.</p>
 
         <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
@@ -34,6 +34,7 @@ session_start();
         </div>
     </div>
 </div>
+<!--    --><?php //include_once '../includes/mail.php' ?>
 <?php else: ?>
 Er zijn errors.
 <?php endif; ?>

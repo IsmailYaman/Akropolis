@@ -152,8 +152,6 @@ if (isset($_POST['submit'])) {
     </div>
 </div>
 
-
-
 <?php require_once '../includes/footer.php' ?>
 <?php require_once '../includes/bootstrap_script.php' ?>
 </body>

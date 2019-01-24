@@ -61,6 +61,12 @@ nav {
 }
 
 
+.main-div-times {
+    background: #ffffff none repeat scroll 0 0;
+
+    margin: 10px auto 30px!important;
+    max-width: 38%;
+}
 
 .main-div {
     background: #ffffff none repeat scroll 0 0;

@@ -11,7 +11,7 @@ require_once "../includes/db.php";
 $reservationId = $_GET['id'];
 
 //Get the record from the database result
-$query = "SELECT * FROM reservations WHERE id =" . mysqli_escape_string($db, $reservationId);
+$query = "SELECT * FROM reservations WHERE id =".mysqli_escape_string($db, $reservationId);
 
 $result = mysqli_query($db, $query)
 or die ('Error: ' . $query);
@@ -42,19 +42,16 @@ mysqli_close($db);
 <body>
 <?= include_once '../includes/navbar.php' ?>
 <div class="container">
-
     <ul class="list-group">
         <li class="list-group-item">Reserveringsnummer: <?= $reservation['id']; ?></li>
         <li class="list-group-item">Datum: <?= $reservation['date']; ?></li>
         <li class="list-group-item">Aantal personen: <?= $reservation['people_amount']; ?></li>
         <li class="list-group-item">Tijdstip: <?= $reservation['time']; ?></li>
+        <li class="list-group-item">Voornaam: <?= $reservation['first_name']; ?></li>
+        <li class="list-group-item">Achternaam: <?= $reservation['last_name']; ?></li>
+        <li class="list-group-item">E-mail: <?= $reservation['email']; ?></li>
+        <li class="list-group-item">Telefoonnummer: 0<?= $reservation['phone']; ?></li>
         <li class="list-group-item">Opmerking: <?= $reservation['comment']; ?></li>
-        <li class="list-group-item">Tracks: <?= $reservation['first_name']; ?></li>
-        <li class="list-group-item">Tracks: <?= $reservation['last_name']; ?></li>
-        <li class="list-group-item">Tracks: <?= $reservation['email']; ?></li>
-        <li class="list-group-item">Tracks: <?= $reservation['phone']; ?></li>
-
-
     </ul>
 </div>
 <div>
