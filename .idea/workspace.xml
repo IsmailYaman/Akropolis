@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adminpanel/delete_confirmed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5761fb83-6cfb-45ab-b6b5-a51d8266becb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5761fb83-6cfb-45ab-b6b5-a51d8266becb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/bevestig.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/bevestig.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/bevestigde_reserveringen.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/bevestigde_reserveringen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/reserveringen.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/reserveringen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/tijden_blokkeren.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/tijden_blokkeren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/confirmpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/confirmpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/reserveren1.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/reserveren1.php" afterDir="false" />
-    </list>
+    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +56,7 @@
     <session id="-1123318313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -311,12 +295,12 @@
       <workItem from="1547403127683" duration="18809000" />
       <workItem from="1547474131995" duration="34996000" />
       <workItem from="1548064900203" duration="12547000" />
-      <workItem from="1548109966041" duration="16117000" />
+      <workItem from="1548109966041" duration="16562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103474000" />
+    <option name="totallyTimeSpent" value="103919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
