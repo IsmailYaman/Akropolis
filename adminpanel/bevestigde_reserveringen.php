@@ -47,7 +47,7 @@ include_once '../includes/navbar.php'
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item ">
-                    <a class="nav-link text-light" href="reserveringen.php">Huidige reserveringen</a>
+                    <a class="nav-link text-light" href="reserveringen.php">Openstaande reserveringen</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="bevestigde_reserveringen.php">Bevestigde reserveringen</a>
