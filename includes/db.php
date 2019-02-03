@@ -2,7 +2,7 @@
 $host       = "localhost";
 $database   = "akropolis";
 $user       = "root";
-$password   = "root";
+$password   = "";
 
 $db = mysqli_connect($host, $user, $password, $database)
 or die("Error: " . mysqli_connect_error());;

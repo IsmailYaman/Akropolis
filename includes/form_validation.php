@@ -4,9 +4,9 @@ $errors = [];
 if ($date == "") {
     $errors['date'] = 'Selecteer een datum.';
 }
-if ($people_amount == "") {
+if ($people_amount == "" || $people_amount == 0 ) {
     $errors['people_amount'] = 'Selecteer aantal personen.';
-}elseif ($people_amount <= "0" || $people_amount>= "16"){
+}elseif ($people_amount>= "16"){
     $errors['people_amount'] = 'Maximaal aantal personen zijn 15.';
 }
 if ($time == "") {
