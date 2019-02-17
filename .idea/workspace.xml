@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/statistic.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5761fb83-6cfb-45ab-b6b5-a51d8266becb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +67,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reserveringen.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reserveringen.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminpanel/reserveringen.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="376">
@@ -83,8 +79,17 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminpanel/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -178,7 +183,6 @@
         <option value="$PROJECT_DIR$/adminpanel/beschikbare_tijden.php" />
         <option value="$PROJECT_DIR$/includes/beschikbare_tijden.php" />
         <option value="$PROJECT_DIR$/adminpanel/detail.php" />
-        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/adminpanel/tijden_blokkeren.php" />
         <option value="$PROJECT_DIR$/includes/mail.php" />
@@ -190,10 +194,11 @@
         <option value="$PROJECT_DIR$/includes/form_validation.php" />
         <option value="$PROJECT_DIR$/reserveringssysteem/reserveren1.php" />
         <option value="$PROJECT_DIR$/reserveringssysteem/index.php" />
-        <option value="$PROJECT_DIR$/adminpanel/index.php" />
         <option value="$PROJECT_DIR$/adminpanel/reserveringen.php" />
         <option value="$PROJECT_DIR$/adminpanel/menu.php" />
         <option value="$PROJECT_DIR$/includes/menu.php" />
+        <option value="$PROJECT_DIR$/adminpanel/index.php" />
+        <option value="$PROJECT_DIR$/css/index.css" />
       </list>
     </option>
   </component>
@@ -228,6 +233,11 @@
               <item name="CLE2" type="b2602c69:ProjectViewProjectNode" />
               <item name="CLE2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="adminpanel" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CLE2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CLE2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="CLE2" type="b2602c69:ProjectViewProjectNode" />
@@ -270,7 +280,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../programmeren3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
@@ -317,15 +327,16 @@
       <workItem from="1549156408103" duration="4914000" />
       <workItem from="1549674706867" duration="2515000" />
       <workItem from="1549677920553" duration="508000" />
-      <workItem from="1550419212972" duration="599000" />
+      <workItem from="1550419212972" duration="1265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112085000" />
+    <option name="totallyTimeSpent" value="112751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -590,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adminpanel/bevestigde_reserveringen.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -646,18 +650,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminpanel/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/menu.php" />
     <entry file="file://$PROJECT_DIR$/adminpanel/reserveringen.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminpanel/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
