@@ -17,7 +17,13 @@ session_start();
 </head>
 <body>
 <?php require_once '../includes/navbar_user.php' ?>
-
+<div class="carousel-item">
+    <img src="..." alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>...</h5>
+        <p>...</p>
+    </div>
+</div>
 <h1 class="text-center my-3">Welkom bij Grieks Restaurant Akropolis Naaldwijk.</h1>
 
 <?php require_once '../includes/footer.php'?>

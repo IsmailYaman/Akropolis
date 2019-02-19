@@ -1,5 +1,7 @@
 <?php
 require_once '../includes/beschikbare_tijden.php';
+//require_once '../includes/form_validation.php';
+
 $query = '';
 if (isset($_POST['submit'])) {
     //Require database in this file & image helpers
@@ -69,7 +71,7 @@ if (isset($_POST['submit'])) {
                         <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                         <?php echo $errors['date']?>
                         </div>
-                        <?php }?>
+                        <?php }else{}?>
                     </div>
 
                     <div class="form-group">
@@ -79,7 +81,7 @@ if (isset($_POST['submit'])) {
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['people_amount']?>
                             </div>
-                        <?php }?>
+                        <?php }else {}?>
                     </div>
 
 
