@@ -26,7 +26,7 @@ mysqli_close($db);
 <html>
 <head>
     <title>Akropolis Naaldwijk | Adminpaneel</title>
-    <?php include_once '../includes/bootstrap_link.php'?>
+    <?php include_once '../includes/bootstrap_link.php' ?>
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -57,41 +57,43 @@ include_once '../includes/navbar.php'
 </nav>
 
 
-    <table class="table">
-        <thead>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Reserveringsnummer</th>
+        <th scope="col">Datum</th>
+        <th scope="col">Aantal personen</th>
+        <th scope="col">Tijdstip</th>
+        <th scope="col">Opmerking</th>
+        <th scope="col">Voornaam</th>
+        <th scope="col">Achternaam</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Telefoon</th>
+        <th scope="col">Bekijk</th>
+        <th colspan="3">Actie</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($reservations as $reservation) { ?>
         <tr>
-            <th scope="col">Reserveringsnummer</th>
-            <th scope="col">Datum</th>
-            <th scope="col">Aantal personen</th>
-            <th scope="col">Tijdstip</th>
-            <th scope="col">Opmerking</th>
-            <th scope="col">Voornaam</th>
-            <th scope="col">Achternaam</th>
-            <th scope="col">E-mail</th>
-            <th scope="col">Telefoon</th>
-            <th scope="col">Bekijk</th>
-            <th colspan="3">Actie</th>
+            <td><?= $reservation['id']; ?></td>
+            <td><?= $reservation['date']; ?></td>
+            <td><?= $reservation['people_amount']; ?></td>
+            <td><?= $reservation['time']; ?></td>
+            <td><?= $reservation['comment']; ?></td>
+            <td><?= $reservation['first_name']; ?></td>
+            <td><?= $reservation['last_name']; ?></td>
+            <td><?= $reservation['email']; ?></td>
+            <td>0<?= $reservation['phone']; ?></td>
+            <td><a href="detail.php?id=<?= $reservation['id'] ?>">Bekijk</a></td>
+            <td><a href="bevestig.php?id=<?= $reservation['id'] ?>"><i style="color: springgreen; font-size: 2rem ;"
+                                                                       class="material-icons">done</i></a></td>
+            <td><a href="delete.php?id=<?= $reservation['id'] ?>"><i style="color: red; font-size: 2rem ;"
+                                                                     class="material-icons">clear</i></a></td>
         </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($reservations as $reservation) { ?>
-            <tr>
-                <td><?= $reservation['id']; ?></td>
-                <td><?= $reservation['date']; ?></td>
-                <td><?= $reservation['people_amount']; ?></td>
-                <td><?= $reservation['time']; ?></td>
-                <td><?= $reservation['comment']; ?></td>
-                <td><?= $reservation['first_name']; ?></td>
-                <td><?= $reservation['last_name']; ?></td>
-                <td><?= $reservation['email']; ?></td>
-                <td>0<?= $reservation['phone']; ?></td>
-                <td><a href="detail.php?id=<?=$reservation['id']?>">Bekijk</a></td>
-                <td><a href="bevestig.php?id=<?=$reservation['id']?>"><i style="color: springgreen; font-size: 2rem ;" class="material-icons">done</i></a></td>
-                <td><a href="delete.php?id=<?=$reservation['id']?>"><i style="color: red; font-size: 2rem ;" class="material-icons">clear</i></a></td>
-            </tr>
-        <?php } ?>
-        </tbody>
-    </table>
+    <?php } ?>
+    </tbody>
+</table>
 <?php
 include_once '../includes/footer.php';
 include_once '../includes/bootstrap_script.php';

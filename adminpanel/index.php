@@ -26,13 +26,13 @@ $num_rows = $values['total'];
 <?php require_once '../includes/navbar.php' ?>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <div class="container">
-        <div class="my-2">
-            <h1>Hallo <?php echo $_SESSION['name'] ?></h1>
-            <h2>Je hebt op dit moment <a href="reserveringen.php"><?= $num_rows; ?></a> reserveringen die bevestigd
-                moeten worden. </h2>
-        </div>
+<div class="container">
+    <div class="my-2">
+        <h1>Hallo <?php echo $_SESSION['name'] ?></h1>
+        <h2>Je hebt op dit moment <a href="reserveringen.php"><?= $num_rows; ?></a> reserveringen die bevestigd
+            moeten worden. </h2>
     </div>
+</div>
 
 
 <?php

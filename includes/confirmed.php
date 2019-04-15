@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
             header('Location: confirmpage.php');
             exit;
         } else {
-            $errors[] = 'Er is iets mis gegaan met de database query: '.mysqli_error($db);
+            $errors[] = 'Er is iets mis gegaan met de database query: '. mysqli_error($db);
         }
 
 

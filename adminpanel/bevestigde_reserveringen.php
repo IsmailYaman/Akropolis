@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -27,7 +26,7 @@ mysqli_close($db);
 <html>
 <head>
     <title>Akropolis Naaldwijk | Adminpaneel</title>
-    <?php include_once '../includes/bootstrap_link.php'?>
+    <?php include_once '../includes/bootstrap_link.php' ?>
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -73,6 +72,7 @@ include_once '../includes/navbar.php'
         <th colspan="3">Wis</th>
     </tr>
     </thead>
+
     <tbody>
     <?php foreach ($reservations as $reservation) { ?>
         <tr>
@@ -85,8 +85,9 @@ include_once '../includes/navbar.php'
             <td><?= $reservation['last_name']; ?></td>
             <td><?= $reservation['email']; ?></td>
             <td>0<?= $reservation['phone']; ?></td>
-            <td><a href="detail.php?id=<?=$reservation['id']?>">Bekijk</a></td>
-            <td><a href="delete_confirmed.php?id=<?=$reservation['id']?>"><i style="color: red; font-size: 2rem ;" class="material-icons">clear</i></a></td>
+            <td><a href="detail.php?id=<?= $reservation['id'] ?>">Bekijk</a></td>
+            <td><a href="delete_confirmed.php?id=<?= $reservation['id'] ?>"><i style="color: red; font-size: 2rem ;"
+                                                                               class="material-icons">clear</i></a></td>
         </tr>
     <?php } ?>
     </tbody>
@@ -96,5 +97,6 @@ include_once '../includes/navbar.php'
 include_once '../includes/footer.php';
 include_once '../includes/bootstrap_script.php';
 ?>
+
 </body>
 </html>
