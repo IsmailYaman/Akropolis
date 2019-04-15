@@ -37,7 +37,7 @@ mysqli_close($db);
     <?= include_once '../includes/bootstrap_link.php' ?>
     <link rel="stylesheet" href="../css/index.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Akropolis Naaldwijk | Detailpagina reservering</title>
 </head>
 <body>
 <?= include_once '../includes/navbar.php' ?>

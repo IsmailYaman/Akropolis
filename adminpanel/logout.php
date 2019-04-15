@@ -1,6 +1,6 @@
 <?php
 session_start();
-//Destroy the whole session, redirect & exit script
-session_destroy();
+
+session_destroy(); //verwijderd de hele sessie
 header('Location: ../reserveringssysteem/index.php');
 exit;

@@ -1,8 +1,7 @@
 <?php
 include_once '../includes/db.php';
 
-
-
+//pakt de id van de reservering waarop je hebt geklikt
 $reservationId = $_GET['id'];
 
 $query = "UPDATE reservations SET confirmed = 1 WHERE id=".mysqli_escape_string($db, $reservationId);

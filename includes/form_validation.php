@@ -1,5 +1,5 @@
 <?php
-//Check if data is valid & generate error if not so
+//check of alle data in de inputevelden kloppen anders error
 $errors = [];
 if ($date == "") {
     $errors['date'] = 'Selecteer een datum.';

@@ -10,3 +10,5 @@
 <script>$(document).ready(function () {
         $('body').bootstrapMaterialDesign();
     });</script>
+
+<!--bootstrap js links-->

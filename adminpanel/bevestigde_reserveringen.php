@@ -1,21 +1,20 @@
 
 <?php
 session_start();
-//If our session doesn't exist, redirect & exit script
+
 if (!isset($_SESSION['name'])) {
     header('Location: login.php');
     exit;
 }
-//Get variable from session to use
+
 $name = $_SESSION['name'];
 
 require_once "../includes/db.php";
 
-//Get the result set from the database with a SQL query
 $query = "SELECT * FROM reservations WHERE confirmed = 1";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
-//Loop through the result to create a custom array
+
 $reservations = [];
 while ($row = mysqli_fetch_assoc($result)) {
     $reservations[] = $row;

@@ -4,7 +4,6 @@ require_once '../includes/beschikbare_tijden.php';
 
 $query = '';
 if (isset($_POST['submit'])) {
-    //Require database in this file & image helpers
     require_once '../includes/db.php';
 
     $date               = mysqli_escape_string($db, $_POST['date']);
@@ -67,7 +66,7 @@ if (isset($_POST['submit'])) {
                     <div class="form-group">
                         <label for="date">Datum</label>
                         <input type="date" class="form-control" name="date" id="date"/>
-                    <?php if($errors == true){?>
+                    <?php if($errors){?>
                         <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                         <?php echo $errors['date']?>
                         </div>

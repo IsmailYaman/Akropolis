@@ -2,7 +2,7 @@
 include_once '../includes/db.php';
 
 if (!isset($_GET['email'])) {
-    // redirect to index.php
+
     header('Location: ../reserveringssysteem/index.php');
     exit;
 }
@@ -21,10 +21,10 @@ if (mysqli_num_rows($result) == 1) {
     exit;
 }
 
-//Close connection
+
 mysqli_close($db);
 
-
+//bruh fix later. naar wie stuurt hij de mail?
 $to      = $reservation['email'];
 $subject = 'Reservering ontvangen';
 $message = 'Uw verzoek is ontvangen en word verwerkt. U krijgt een bevestigingsmail zodra uw reservering is bevestigd ';

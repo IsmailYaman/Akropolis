@@ -1,26 +1,25 @@
 <?php
 session_start();
-//If our session doesn't exist, redirect & exit script
 if (!isset($_SESSION['name'])) {
     header('Location: login.php');
     exit;
 }
-//Get variable from session to use
+//pakt de variable van de sessie om te gebruiken
 $name = $_SESSION['name'];
 
 require_once "../includes/db.php";
 
-//Get the result set from the database with a SQL query
+
 $query = "SELECT * FROM reservations WHERE confirmed = 0";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
-//Loop through the result to create a custom array
+//loopt door de result om een custom array te maken
 $reservations = [];
 while ($row = mysqli_fetch_assoc($result)) {
     $reservations[] = $row;
 }
 
-//Close connection
+//close connection
 mysqli_close($db);
 ?>
 <!DOCTYPE html>

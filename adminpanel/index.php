@@ -1,6 +1,7 @@
 <?php
-session_start();
+session_start();//moet bij elk pagina waar gebruiker is ingelogt
 
+//stuurt naar de login pagina als die ziet dat de gebruiker niet bestaat.
 if (!isset($_SESSION['name'])) {
     header('Location: login.php');
     exit;

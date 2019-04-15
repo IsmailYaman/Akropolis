@@ -34,7 +34,8 @@ include_once '../includes/confirmed.php';
         </div>
     </div>
 </div>
-<!--    --><?php //include_once '../includes/mail.php' ?>
+<!--kijk hoe je dit kan fixen-->
+<?php //include_once '../includes/mail.php' ?>
 <?php else: ?>
 Er zijn errors.
 <?php endif; ?>
