@@ -15,28 +15,32 @@ include_once '../includes/confirmed.php';
 </head>
 <body>
 <?php include_once '../includes/navbar_user.php' ?>
-<?php if(empty($errors)): ?>
-<div class="container">
-    <div class="card login">
-        <div class="card  text-center">
-            <h1 class="header-text" >Reservering gelukt</h1>
-        </div>
-
-        <p class="text-center">Uw aanvraag is ontvangen en word verwerkt. U krijgt een mail als uw aanvraag is
-            goedgekeurd.</p>
-
-        <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
-        <div class="main-div">
-            <div class="panel">
+<?php if (empty($errors)): ?>
+    <div class="container">
+        <div class="card login">
+            <div class="card  text-center">
+                <h1 class="header-text">Reservering gelukt</h1>
             </div>
-            <a href="index.php" ><button type="submit" name="submit" value="submit" class="mb-0 p-2 mt-5 btn btn-primary standard-primary-button">Ga terug
-            </button></a>
+
+            <p class="text-center">Uw aanvraag is ontvangen en word verwerkt. U krijgt een mail als uw aanvraag is
+                goedgekeurd.</p>
+
+            <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
+            <div class="main-div">
+                <div class="panel">
+                </div>
+                <a href="index.php">
+                    <button type="submit" name="submit" value="submit"
+                            class="mb-0 p-2 mt-5 btn btn-primary standard-primary-button">Ga terug
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<!--    --><?php //include_once '../includes/mail.php' ?>
+    <!--kijk hoe je dit kan fixen-->
+    <?php //include_once '../includes/mail.php' ?>
 <?php else: ?>
-Er zijn errors.
+    Er zijn errors.
 <?php endif; ?>
 
 

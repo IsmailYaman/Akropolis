@@ -1,21 +1,19 @@
-
 <?php
 session_start();
-//If our session doesn't exist, redirect & exit script
+
 if (!isset($_SESSION['name'])) {
     header('Location: login.php');
     exit;
 }
-//Get variable from session to use
+
 $name = $_SESSION['name'];
 
 require_once "../includes/db.php";
 
-//Get the result set from the database with a SQL query
 $query = "SELECT * FROM reservations WHERE confirmed = 1";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
-//Loop through the result to create a custom array
+
 $reservations = [];
 while ($row = mysqli_fetch_assoc($result)) {
     $reservations[] = $row;
@@ -28,7 +26,7 @@ mysqli_close($db);
 <html>
 <head>
     <title>Akropolis Naaldwijk | Adminpaneel</title>
-    <?php include_once '../includes/bootstrap_link.php'?>
+    <?php include_once '../includes/bootstrap_link.php' ?>
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -74,6 +72,7 @@ include_once '../includes/navbar.php'
         <th colspan="3">Wis</th>
     </tr>
     </thead>
+
     <tbody>
     <?php foreach ($reservations as $reservation) { ?>
         <tr>
@@ -86,8 +85,9 @@ include_once '../includes/navbar.php'
             <td><?= $reservation['last_name']; ?></td>
             <td><?= $reservation['email']; ?></td>
             <td>0<?= $reservation['phone']; ?></td>
-            <td><a href="detail.php?id=<?=$reservation['id']?>">Bekijk</a></td>
-            <td><a href="delete_confirmed.php?id=<?=$reservation['id']?>"><i style="color: red; font-size: 2rem ;" class="material-icons">clear</i></a></td>
+            <td><a href="detail.php?id=<?= $reservation['id'] ?>">Bekijk</a></td>
+            <td><a href="delete_confirmed.php?id=<?= $reservation['id'] ?>"><i style="color: red; font-size: 2rem ;"
+                                                                               class="material-icons">clear</i></a></td>
         </tr>
     <?php } ?>
     </tbody>
@@ -97,5 +97,6 @@ include_once '../includes/navbar.php'
 include_once '../includes/footer.php';
 include_once '../includes/bootstrap_script.php';
 ?>
+
 </body>
 </html>

@@ -25,3 +25,4 @@
         </div>
     </div>
 </nav>
+<!--navbar van de gebruiker-->

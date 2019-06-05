@@ -1,24 +1,23 @@
 <?php
 require_once "../includes/db.php";
-session_start();
-//If already logged in, no need to be here
+session_start(); //moet bij elke pagina waar iemand is ingelogd
+// stuurt terug naar index pagina als de gebruiker niet ingelogd is
 if (isset($_SESSION['name'])) {
     header('Location: index.php');
     exit;
 }
-//On post submit, check the credentials
+//bij post submit, checkt de ingevulde gegevens
 if (isset($_POST['submit'])) {
-    //Retrieve values (email safe for query)
+    //retrieve de gegevens van de persoon die inlogt
     $username = mysqli_escape_string($db, $_POST['username']);
     $password = $_POST['password'];
-    //Get password & name from DB
+    //Get wachtwoord & databse naam
     $query = "SELECT password, name FROM users
               WHERE username = '$username'";
     $result = mysqli_query($db, $query);
     $user = mysqli_fetch_assoc($result);
-    //Go on if we got an user (which means email is correct)
     if ($user) {
-        //Validate password
+        //verify de wachtwoord
         if (password_verify($password, $user['password'])) {
             //Set session variable, redirect & exit script
             $_SESSION['name'] = $user['name'];

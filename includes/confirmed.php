@@ -13,11 +13,9 @@ if (isset($_POST['submit'])) {
     $email          = mysqli_escape_string($db, $_POST['email']);
     $phone          = mysqli_escape_string($db, $_POST['phone']);
 
-    //Require the form validation handling
     require_once "../includes/form_validation.php";
-    //Special check for add form only
+
     if (empty($errors)) {
-        //Save the record to the database
         $query = "INSERT INTO reservations(date, time, people_amount, first_name, last_name, phone, email, comment) 
                   VALUE ('$date', '$time', '$people_amount', '$first_name', '$last_name', '$phone', '$email', '$comment')";
 
@@ -28,10 +26,10 @@ if (isset($_POST['submit'])) {
             header('Location: confirmpage.php');
             exit;
         } else {
-            $errors[] = 'Er is iets mis gegaan met de database query: '.mysqli_error($db);
+            $errors[] = 'Er is iets mis gegaan met de database query: '. mysqli_error($db);
         }
 
-        //Close connection
+
         mysqli_close($db);
     } else {
         var_dump($errors);

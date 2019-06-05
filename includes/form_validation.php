@@ -1,17 +1,17 @@
 <?php
-//Check if data is valid & generate error if not so
+//check of alle data in de inputevelden kloppen anders error
 $errors = [];
 if ($date == "") {
     $errors['date'] = 'Selecteer een datum.';
 }
-if ($people_amount == "" || $people_amount == 0 ) {
+if ($people_amount == "" || $people_amount == 0) {
     $errors['people_amount'] = 'Selecteer aantal personen.';
-}elseif ($people_amount>= "16"){
+} elseif ($people_amount >= "16") {
     $errors['people_amount'] = 'Maximaal aantal personen zijn 15.';
 }
 if ($time == "") {
     $errors['time'] = 'Selecteer een tijdstip.';
-}elseif ($time <= "16:29" || $time >= "21:31"){
+} elseif ($time <= "16:29" || $time >= "21:31") {
     $errors['time'] = 'Selecteer een tijdstip tussen 16:30 en 21:30.';
 }
 

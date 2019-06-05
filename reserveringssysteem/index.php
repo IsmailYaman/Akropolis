@@ -1,7 +1,3 @@
-<?php
-require_once '../includes/db.php';
-session_start();
-?>
 <html lang="en">
 <!doctype html>
 <head>
@@ -26,7 +22,7 @@ session_start();
 </div>
 <h1 class="text-center my-3">Welkom bij Grieks Restaurant Akropolis Naaldwijk.</h1>
 
-<?php require_once '../includes/footer.php'?>
+<?php require_once '../includes/footer.php' ?>
 <?php require_once '../includes/bootstrap_script.php' ?>
 </body>
 </html>
