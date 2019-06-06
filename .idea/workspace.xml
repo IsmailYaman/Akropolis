@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/adminpanel/bevestig.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/bevestig.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/bevestigde_reserveringen.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/bevestigde_reserveringen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/delete_confirmed.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/delete_confirmed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/reserveringen.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/reserveringen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminpanel/tijden_blokkeren.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminpanel/tijden_blokkeren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/confirmed.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/confirmed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/form_validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/form_validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/confirmpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/confirmpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reserveringssysteem/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/reserveringssysteem/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/user.php" afterDir="false" />
-    </list>
+    <list default="true" id="99a2ed97-bcea-4131-b974-59ed84ca6db0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,8 +112,8 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="160">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -389,12 +373,12 @@
       <workItem from="1549677920553" duration="508000" />
       <workItem from="1550419212972" duration="1265000" />
       <workItem from="1555276254592" duration="1341000" />
-      <workItem from="1555356478561" duration="4280000" />
+      <workItem from="1555356478561" duration="4309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118372000" />
+    <option name="totallyTimeSpent" value="118401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
@@ -718,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        <state relative-caret-position="160">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>
