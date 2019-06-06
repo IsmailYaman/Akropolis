@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
 <?php require_once '../includes/navbar_user.php' ?>
 
 <div class="container">
-    <div class="card login">
+    <div class="card ">
         <div class="card  text-center">
             <h1 class="header-text">Reserveren</h1>
         </div>
@@ -65,22 +65,22 @@ if (isset($_POST['submit'])) {
                 <form action="" method="post" >
                     <div class="form-group">
                         <label for="date">Datum</label>
-                        <input type="date" class="form-control" name="date" id="date"/>
-                    <?php if($errors){?>
+                        <input type="date" class="form-control" name="date" id="date" value="<?php echo isset($_POST['date']) ? $_POST['date'] : '' ?>"/>
+                    <?php if(isset($errors)){?>
                         <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                         <?php echo $errors['date']?>
                         </div>
-                        <?php }else{}?>
+                        <?php }?>
                     </div>
 
                     <div class="form-group">
                         <label for="people_amount">Aantal personen</label>
-                        <input type="number" class="form-control" name="people_amount" id="people_amount"/>
-                        <?php if($errors == true){?>
+                        <input type="number" class="form-control" name="people_amount" id="people_amount" value="<?php echo isset($_POST['people_amount']) ? $_POST['people_amount'] : '' ?>"/>
+                        <?php if(isset($errors)){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['people_amount']?>
                             </div>
-                        <?php }else {}?>
+                        <?php }?>
                     </div>
 
 
@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
                             <option value="<?= $time ?>"><?= $time ?></option>
                         <?php } ?>
                     </select>
-                        <?php if($errors == true){?>
+                        <?php if(isset($errors)){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['time']?>
                             </div>
@@ -101,8 +101,8 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-group">
                         <label for="first_name">Voornaam</label>
-                        <input type="text" class="form-control" name="first_name" id="first_name"/>
-                        <?php if($errors == true){?>
+                        <input type="text" class="form-control" name="first_name" id="first_name" value="<?php echo isset($_POST['first_name']) ? $_POST['first_name'] : '' ?>"/>
+                        <?php if(isset($errors )){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['first_name']?>
                             </div>
@@ -111,8 +111,8 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-group">
                         <label for="last_name">Achternaam</label>
-                        <input type="text" class="form-control" name="last_name" id="last_name"/>
-                        <?php if($errors == true){?>
+                        <input type="text" class="form-control" name="last_name" id="last_name" value="<?php echo isset($_POST['last_name']) ? $_POST['last_name'] : '' ?>"/>
+                        <?php if(isset($errors)){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['last_name']?>
                             </div>
@@ -121,8 +121,8 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-group">
                         <label for="phone">Telefoon</label>
-                        <input type="number" class="form-control" name="phone" id="phone"/>
-                        <?php if($errors == true){?>
+                        <input type="number" class="form-control" name="phone" id="phone" value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : '' ?>"/>
+                        <?php if(isset($errors )){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['phone']?>
                             </div>
@@ -131,8 +131,8 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" class="form-control" id="email"/>
-                        <?php if($errors == true){?>
+                        <input type="email" name="email" class="form-control" id="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : '' ?>"/>
+                        <?php if(isset($errors)){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['email']?>
                             </div>

@@ -39,7 +39,7 @@ var_dump($_POST);
             <div class="form-group">
                 <label for="date">Datum</label>
                 <input type="date" class="form-control" name="date" id="date"/>
-                <?php if ($errors == true) { ?>
+                <?php if (isset($errors )) { ?>
                     <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                         <?php echo $errors['date'] ?>
                     </div>
@@ -54,7 +54,7 @@ var_dump($_POST);
                         <option value="<?= $time ?>"><?= $time ?></option>
                     <?php } ?>
                 </select>
-                <?php if ($errors == true) { ?>
+                <?php if (isset($errors)) { ?>
                     <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                         <?php echo $errors['time'] ?>
                     </div>
