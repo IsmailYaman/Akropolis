@@ -14,7 +14,7 @@
 <body>
 <?php require_once '../includes/navbar_user.php' ?>
 <div class="carousel-item">
-    <img src="..." alt="...">
+    <img src="" alt="...">
     <div class="carousel-caption d-none d-md-block">
         <h5>...</h5>
         <p>...</p>

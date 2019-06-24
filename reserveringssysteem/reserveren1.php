@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
             header('Location: confirmpage.php');
             exit;
         } else {
-            $errors[] = 'Er is iets fout gegaan. Ptobeer op nieuw' . mysqli_error($db);
+            $errors[] = 'Er is iets fout gegaan. Probeer op nieuw' . mysqli_error($db);
         }
 
         //Close connection
