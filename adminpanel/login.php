@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>kropolis Naaldwijk | Login</title>
+    <title>Akropolis Naaldwijk | Login</title>
     <?php require_once '../includes/bootstrap_link.php' ?>
     <link rel="stylesheet" href="../css/index.css   ">
 </head>

@@ -20,7 +20,7 @@
         <p>...</p>
     </div>
 </div>
-<h1 class="text-center my-3">Welkom bij Grieks Restaurant Akropolis Naaldwijk.</h1>
+<h1 class="text-center my-3 welcome">Welkom bij Akropolis Naaldwijk.</h1>
 
 <?php require_once '../includes/footer.php' ?>
 <?php require_once '../includes/bootstrap_script.php' ?>
