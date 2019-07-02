@@ -1,6 +1,10 @@
 <?php
+
+use Faker\Factory;
+
 require_once '../includes/beschikbare_tijden.php';
-//require_once '../includes/form_validation.php';
+require_once '../vendor/autoload.php';
+
 
 $query = '';
 if (isset($_POST['submit'])) {
@@ -22,7 +26,6 @@ if (isset($_POST['submit'])) {
         //Save the record to the database
         $query = "INSERT INTO reservations(date, time, people_amount, first_name, last_name, phone, email, comment) VALUE ('$date', '$time', '$people_amount', '$first_name', '$last_name', '$phone', '$email', '$comment')";
 
-
         $result = mysqli_query($db, $query)
         or die('Error: '.$query);
 
@@ -36,7 +39,10 @@ if (isset($_POST['submit'])) {
         //Close connection
         mysqli_close($db);
     }
+
+
 }
+$faker = Faker\Factory::create();
 ?>
 <!doctype html>
 <html lang="en">
@@ -60,17 +66,14 @@ if (isset($_POST['submit'])) {
 
         <div class="login-form">
             <div class="main-div">
-                <div class="panel">
-
-                </div>
                 <form action="" method="post" >
                     <div class="form-group">
                         <label for="date">Datum</label>
                         <input type="date" class="form-control" name="date" id="date" value="<?php echo isset($_POST['date']) ? $_POST['date'] : '' ?>"/>
-                    <?php if(isset($errors)){?>
-                        <div class=" mt-2 mb-0 alert alert-warning" role="alert">
-                        <?php echo $errors['date']?>
-                        </div>
+                        <?php if(isset($errors)){?>
+                            <div class=" mt-2 mb-0 alert alert-warning" role="alert">
+                                <?php echo $errors['date']?>
+                            </div>
                         <?php }?>
                     </div>
 
@@ -84,15 +87,30 @@ if (isset($_POST['submit'])) {
                         <?php }?>
                     </div>
 
+<!--                    --><?php //echo $faker->date($format = 'Y-m-d', $min = 'now');?>
+<!--                    <br>-->
+<!--                    --><?php //echo $faker->biasedNumberBetween($min = 0, $max = 15);?>
+<!--                    <br>-->
+<!--                    --><?php //echo $faker->time($format = 'H:i', $interval = '+ 30 minutes', $max = 'now')?>
+<!--                    <br>-->
+<!--                    --><?php //echo $faker->firstName ?>
+<!--                    <br>-->
+<!--                    --><?php //echo $faker->lastName ?>
+<!--                    <br>-->
+<!--                    --><?php //echo $faker->tollFreePhoneNumber ?>
+<!--                    <br>-->
+<!--                    --><?php //echo $faker->email ?>
+<!--                    <br>-->
+<!--                    --><?php //echo $faker->text($maxNbChars = 50)?>
 
                     <div class="form-group">
                         <label for="time">Tijdstip</label>
-                    <select class="form-control" id="time" name="time">
-                        <option value="">Selecteer een tijdstip</option>
-                        <?php foreach ($times as $time) { ?>
-                            <option value="<?= $time ?>"><?= $time ?></option>
-                        <?php } ?>
-                    </select>
+                        <select class="form-control" id="time" name="time">
+                            <option value="">Selecteer een tijdstip</option>
+                            <?php foreach ($times as $time) { ?>
+                                <option value="<?= $time ?>"><?= $time ?></option>
+                            <?php } ?>
+                        </select>
                         <?php if(isset($errors)){?>
                             <div class=" mt-2 mb-0 alert alert-warning" role="alert">
                                 <?php echo $errors['time']?>
@@ -148,6 +166,9 @@ if (isset($_POST['submit'])) {
                     <button type="submit" name="submit" value="submit" class="btn btn-primary standard-primary-button">Volgende</button>
 
                 </form>
+                <div class="panel">
+
+                </div>
             </div>
 
         </div>
