@@ -10,7 +10,7 @@ if (isset($_SESSION['name'])) {
 if (isset($_POST['submit'])) {
     //retrieve de gegevens van de persoon die inlogt
     $username = mysqli_escape_string($db, $_POST['username']);
-    $password = $_POST['password'];
+    $password = mysqli_escape_string($db, $_POST['password']);
     //Get wachtwoord & databse naam
     $query = "SELECT password, name FROM users
               WHERE username = '$username'";
