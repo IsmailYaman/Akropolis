@@ -1,10 +1,11 @@
 <?php
 
-use Faker\Factory;
+//use Faker\Factory;
 
 require_once '../includes/beschikbare_tijden.php';
 require_once '../vendor/autoload.php';
 
+$faker = Faker\Factory::create('nl_NL');
 
 $query = '';
 if (isset($_POST['submit'])) {
@@ -18,13 +19,24 @@ if (isset($_POST['submit'])) {
     $last_name          = mysqli_escape_string($db, $_POST['last_name']);
     $email              = mysqli_escape_string($db, $_POST['email']);
     $phone              = mysqli_escape_string($db, $_POST['phone']);
+    $fakerDate          = $faker->date($format = 'Y-m-d', $min = 'now');
+    $fakerTime          = $faker->time($format = 'H:i', $max = 'now');
+    $fakerPeopleAmount  = $faker->biasedNumberBetween($min = 0, $max = 15);
+    $fakerFirstName     = $faker->firstName;
+    $fakerLastName      = $faker->lastName;
+    $fakerPhoneNumber   = $faker->phoneNumber;
+    $fakerEmail         = $faker->email;
+    $fakerComment       = $faker->text($maxNbChars = 50);
+
+
+
 
     //Require the form validation handling
-    require_once "../includes/form_validation.php";
+//    require_once "../includes/form_validation.php";
     //Special check for add form only
     if (empty($errors)) {
         //Save the record to the database
-        $query = "INSERT INTO reservations(date, time, people_amount, first_name, last_name, phone, email, comment) VALUE ('$date', '$time', '$people_amount', '$first_name', '$last_name', '$phone', '$email', '$comment')";
+        $query = "INSERT INTO reservations(date, time, people_amount, first_name, last_name, phone, email, comment) VALUE ('$fakerDate', '$fakerTime', '$fakerPeopleAmount', '$fakerFirstName','$fakerLastName', '$fakerPhoneNumber', '$fakerEmail','$fakerComment')";
 
         $result = mysqli_query($db, $query)
         or die('Error: '.$query);
@@ -33,7 +45,7 @@ if (isset($_POST['submit'])) {
             header('Location: confirmpage.php');
             exit;
         } else {
-            $errors[] = 'Er is iets fout gegaan. Probeer op nieuw' . mysqli_error($db);
+//            $errors[] = 'Er is iets fout gegaan. Probeer op nieuw' . mysqli_error($db);
         }
 
         //Close connection
@@ -42,7 +54,7 @@ if (isset($_POST['submit'])) {
 
 
 }
-$faker = Faker\Factory::create();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -63,6 +75,7 @@ $faker = Faker\Factory::create();
         <div class="card  text-center">
             <h1 class="header-text">Reserveren</h1>
         </div>
+
 
         <div class="login-form">
             <div class="main-div">
@@ -91,13 +104,13 @@ $faker = Faker\Factory::create();
 <!--                    <br>-->
 <!--                    --><?php //echo $faker->biasedNumberBetween($min = 0, $max = 15);?>
 <!--                    <br>-->
-<!--                    --><?php //echo $faker->time($format = 'H:i', $interval = '+ 30 minutes', $max = 'now')?>
+<!--                    --><?php //echo $faker->time($format = 'H:i', $max = 'now')?>
 <!--                    <br>-->
 <!--                    --><?php //echo $faker->firstName ?>
 <!--                    <br>-->
 <!--                    --><?php //echo $faker->lastName ?>
 <!--                    <br>-->
-<!--                    --><?php //echo $faker->tollFreePhoneNumber ?>
+<!--                    --><?php //echo $faker->phoneNumber ?>
 <!--                    <br>-->
 <!--                    --><?php //echo $faker->email ?>
 <!--                    <br>-->
