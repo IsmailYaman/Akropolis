@@ -43,13 +43,12 @@ if (isset($_POST['submit'])) {
 
 <div class="container">
     <div class="card login">
-        <h1 class="text-center">Login Akropolis</h1>
+    <div class="card  text-center">
+            <h1 class="header-text">Login</h1>
+        </div>
         <div class="login-form">
-            <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
-            <div class="main-div">
-                <div class="panel">
+            <div class="main-div text-center">
 
-                </div>
                 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" id="Login">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Gebruikersnaam</label>

@@ -13,16 +13,27 @@
 </head>
 <body>
 <?php require_once '../includes/navbar_user.php' ?>
-<div class="carousel-item">
-    <img src="" alt="...">
-    <div class="carousel-caption d-none d-md-block">
-        <h5>...</h5>
-        <p>...</p>
-    </div>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>This website is still in development and contains unfinished parts</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
-<h1 class="text-center my-3 welcome">Welkom bij Akropolis Naaldwijk.</h1>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div class="carousel-caption d-md-block">
+    <h1 class="text-center my-3 welcome">Welkom bij Akropolis Naaldwijk</h1>
+  </div>
+      <img class="d-block w-100" src="../img/food3.png" alt="First slide">
+    </div>
+  </div>
+  
+</div>
+
 
 <?php require_once '../includes/footer.php' ?>
 <?php require_once '../includes/bootstrap_script.php' ?>
+<script src="../js/main.js"></script>
 </body>
 </html>

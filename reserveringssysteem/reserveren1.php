@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
 
 
         <div class="login-form">
-            <div class="main-div">
+            <div class="main-div text-center">
                 <form action="" method="post" >
                     <div class="form-group">
                         <label for="date">Datum</label>

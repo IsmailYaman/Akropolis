@@ -10,8 +10,7 @@ while ($time <= strtotime('21:30')) {
 }
 
 $date = [];
-var_dump($_POST);
-//fix later
+
 ?>
 
 <!doctype html>
@@ -28,14 +27,16 @@ var_dump($_POST);
 <body>
 <?php include_once '../includes/navbar.php' ?>
 
-<div class="container">
-    <div class="card  text-center">
-    </div>
-    <div class="main-div-times">
-        <div class="panel">
 
+<div class="container">
+    <div class="card login">
+    <div class="card  text-center">
+            <h1 class="header-text">Tijden blokkeren</h1>
         </div>
-        <form action="" method="post">
+        <div class="login-form">
+            <div class="main-div text-center">
+
+            <form action="" method="post">
             <div class="form-group">
                 <label for="date">Datum</label>
                 <input type="date" class="form-control" name="date" id="date"/>
@@ -64,9 +65,10 @@ var_dump($_POST);
             <input type="submit" name="submit" class="btn btn-primary standard-primary-button" value="Bevestig">
 
         </form>
+            </div>
+
+        </div>
     </div>
-
-
 </div>
 <?php
 include_once '../includes/footer.php';

@@ -56,17 +56,18 @@ include_once '../includes/navbar.php'
     </div>
 </nav>
 
+<div class="container">
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">Reserveringsnummer</th>
-        <th scope="col">Datum</th>
+        <!-- <th scope="col">Reserveringsnummer</th> -->
+        <!-- <th scope="col">Datum</th> -->
         <th scope="col">Aantal personen</th>
         <th scope="col">Tijdstip</th>
-        <th scope="col">Opmerking</th>
+        <!-- <th scope="col">Opmerking</th> -->
         <th scope="col">Voornaam</th>
         <th scope="col">Achternaam</th>
-        <th scope="col">E-mail</th>
+        <!-- <th scope="col">E-mail</th> -->
         <th scope="col">Telefoon</th>
         <th scope="col">Bekijk</th>
         <th colspan="3">Wis</th>
@@ -76,14 +77,14 @@ include_once '../includes/navbar.php'
     <tbody>
     <?php foreach ($reservations as $reservation) { ?>
         <tr>
-            <td><?= $reservation['id']; ?></td>
-            <td><?= $reservation['date']; ?></td>
+            <!-- <td><?= $reservation['id']; ?></td> -->
+            <!-- <td><?= $reservation['date']; ?></td> -->
             <td><?= $reservation['people_amount']; ?></td>
             <td><?= $reservation['time']; ?></td>
-            <td><?= $reservation['comment']; ?></td>
+            <!-- <td><?= $reservation['comment']; ?></td> -->
             <td><?= $reservation['first_name']; ?></td>
             <td><?= $reservation['last_name']; ?></td>
-            <td><?= $reservation['email']; ?></td>
+            <!-- <td><?= $reservation['email']; ?></td> -->
             <td>0<?= $reservation['phone']; ?></td>
             <td><a href="detail.php?id=<?= $reservation['id'] ?>">Bekijk</a></td>
             <td><a href="delete_confirmed.php?id=<?= $reservation['id'] ?>"><i style="color: red; font-size: 2rem ;"
@@ -92,7 +93,7 @@ include_once '../includes/navbar.php'
     <?php } ?>
     </tbody>
 </table>
-
+</div>
 <?php
 include_once '../includes/footer.php';
 include_once '../includes/bootstrap_script.php';

@@ -1,14 +1,11 @@
-
 html {
     position: relative;
     min-height: 100%;
-
 }
 
 body {
     margin-bottom: 150px;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .footer {
@@ -19,27 +16,27 @@ body {
     background-color: #f5f5f5;
 }
 
-a{
+a {
     color: #BB141A!important;
 }
 
 .logo {
     margin: 1em;
     height: 150px;
-
 }
 
-.text-center{
+.text-center {
     /* min-width: 18em; */
     margin: 0 auto;
 }
 
-.header-text{
+.header-text {
     padding: 20px 30px;
     margin: 0;
     background-color: #bb141a!important;
     color: #ffffff!important;
 }
+
 nav {
     background-color: #383232 !important;
 }
@@ -54,26 +51,35 @@ nav {
 }
 
 .container .card {
-    margin-top: 3em;
+    margin-top: 4rem;
 }
 
 .container .card .text-center {
     margin-top: 1em;
+    position: relative;
+    top: -50px;
 }
 
+.carousel-item {
+    position: relative!important;
+    height: 25rem;
+}
+
+.carousel-item>img {
+    position: absolute!important;
+    top: 50%!important;
+    transform: translateY(-50%)!important;
+}
 
 .main-div-times {
     background: #ffffff none repeat scroll 0 0;
-
     margin: 10px auto 30px!important;
     max-width: 38%;
 }
 
 .main-div {
     background: #ffffff none repeat scroll 0 0;
-
-    margin: 10px auto 30px;
-    max-width: 38%;
+    max-width: 20rem;
 }
 
 .login-form .form-group {
@@ -84,7 +90,7 @@ nav {
     text-align: center;
 }
 
-.standard-primary-button{
+.standard-primary-button {
     background: #bb141a none repeat scroll 0 0!important;
     color: #ffffff!important;
     font-size: 16px;
@@ -99,6 +105,6 @@ nav {
 
 @media only screen and (max-width: 991px) {
     .welcome {
-      font-size: 24px;
+        font-size: 24px;
     }
-  }
+}

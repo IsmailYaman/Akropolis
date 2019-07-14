@@ -26,9 +26,7 @@ include_once '../includes/confirmed.php';
                 goedgekeurd.</p>
 
             <img class="text-center" src="../img/logo_small.png" width="250" height="auto" alt="">
-            <div class="main-div">
-                <div class="panel">
-                </div>
+            <div class="main-div text-center">
                 <a href="index.php">
                     <button type="submit" name="submit" value="submit"
                             class="mb-0 p-2 mt-5 btn btn-primary standard-primary-button">Ga terug
