@@ -21,8 +21,9 @@ a {
 }
 
 .logo {
-    margin: 1em;
-    height: 150px;
+    /*margin: 1em;*/
+    height: auto;
+    width: 300px;
 }
 
 .text-center {

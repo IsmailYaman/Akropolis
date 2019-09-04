@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php require_once '../includes/navbar_user.php' ?>
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="alert alert-warning alert-dismissible fade show" style="margin: 0px;" role="alert">
   <strong>This website is still in development and contains unfinished parts</strong>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -28,6 +28,41 @@
       <img class="d-block w-100" src="../img/food3.png" alt="First slide">
     </div>
   </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-4">
+                <div class="card text-center" style="width: 18rem;">
+                    <img class="card-img-top" src="../img/food1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Menu</h5>
+                        <p class="card-text">Bekijk ons volledige menu en de wijnkaart. Voor de bezorging hebben we een op maat gemaakte menu kaart. Wij hebben maandelijks (naast het a la carte gedeelte) een aparte kaart met nieuwe gerechten.</p>
+                        <a href="#" class="btn btn-primary">Bekijk het menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+                <div class="card text-center" style="width: 18rem;">
+                    <img class="card-img-top" src="../img/feestzaal.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Feestzaal</h5>
+                        <p class="card-text">Wij zijn de laatste jaren zeer sterk gegroeid in het organiseren van alle (bedrijf) feesten, recepties, borrels en trouwpartijen. Sinds 2014 zijn wij een officiële trouwlocatie.</p>
+                        <a href="#" class="btn btn-primary">Meer informatie</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+                <div class="card text-center" style="width: 18rem;">
+                    <img class="card-img-top" src="../img/over-ons.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Over ons</h5>
+                        <p class="card-text">Het geheime recept voor de befaamde stifado van Grieks restaurant Plaka in Naaldwijk blijft onveranderd, maar de specialiteit wordt sinds kort in een nieuw onderkomen geserveerd.</p>
+                        <a href="#" class="btn btn-primary">Meer informatie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   
 </div>
 

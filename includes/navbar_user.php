@@ -1,6 +1,6 @@
 <div class="mx-auto">
 <div class="text-center">
-    <a href="../reserveringssysteem/index.php"><img class="logo" src="../img/logo.png" alt=""></a>
+    <a href="../reserveringssysteem/index.php"><img class="logo img-fluid" src="../img/logo.png" alt=""></a>
 </div>
 </div>
 <nav class="navbar navbar-expand-sm navbar-light">
