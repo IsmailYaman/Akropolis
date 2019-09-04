@@ -1,11 +1,6 @@
 <?php
 
-//use Faker\Factory;
-
 require_once '../includes/beschikbare_tijden.php';
-require_once '../vendor/autoload.php';
-
-$faker = Faker\Factory::create('nl_NL');
 
 $query = '';
 if (isset($_POST['submit'])) {
@@ -19,24 +14,17 @@ if (isset($_POST['submit'])) {
     $last_name          = mysqli_escape_string($db, $_POST['last_name']);
     $email              = mysqli_escape_string($db, $_POST['email']);
     $phone              = mysqli_escape_string($db, $_POST['phone']);
-    $fakerDate          = $faker->date($format = 'Y-m-d', $min = 'now');
-    $fakerTime          = $faker->time($format = 'H:i', $max = 'now');
-    $fakerPeopleAmount  = $faker->biasedNumberBetween($min = 0, $max = 15);
-    $fakerFirstName     = $faker->firstName;
-    $fakerLastName      = $faker->lastName;
-    $fakerPhoneNumber   = $faker->phoneNumber;
-    $fakerEmail         = $faker->email;
-    $fakerComment       = $faker->text($maxNbChars = 50);
+
 
 
 
 
     //Require the form validation handling
-//    require_once "../includes/form_validation.php";
+    require_once "../includes/form_validation.php";
     //Special check for add form only
     if (empty($errors)) {
         //Save the record to the database
-        $query = "INSERT INTO reservations(date, time, people_amount, first_name, last_name, phone, email, comment) VALUE ('$fakerDate', '$fakerTime', '$fakerPeopleAmount', '$fakerFirstName','$fakerLastName', '$fakerPhoneNumber', '$fakerEmail','$fakerComment')";
+        $query = "INSERT INTO reservations(date, time, people_amount, first_name, last_name, phone, email, comment) VALUE ('$date', '$time', '$people_amount', '$first_name','$last_name', '$phone', '$email','$comment')";
 
         $result = mysqli_query($db, $query)
         or die('Error: '.$query);
@@ -99,22 +87,6 @@ if (isset($_POST['submit'])) {
                             </div>
                         <?php }?>
                     </div>
-
-<!--                    --><?php //echo $faker->date($format = 'Y-m-d', $min = 'now');?>
-<!--                    <br>-->
-<!--                    --><?php //echo $faker->biasedNumberBetween($min = 0, $max = 15);?>
-<!--                    <br>-->
-<!--                    --><?php //echo $faker->time($format = 'H:i', $max = 'now')?>
-<!--                    <br>-->
-<!--                    --><?php //echo $faker->firstName ?>
-<!--                    <br>-->
-<!--                    --><?php //echo $faker->lastName ?>
-<!--                    <br>-->
-<!--                    --><?php //echo $faker->phoneNumber ?>
-<!--                    <br>-->
-<!--                    --><?php //echo $faker->email ?>
-<!--                    <br>-->
-<!--                    --><?php //echo $faker->text($maxNbChars = 50)?>
 
                     <div class="form-group">
                         <label for="time">Tijdstip</label>
